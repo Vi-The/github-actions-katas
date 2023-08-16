@@ -8,3 +8,8 @@ jobs:
       - name: Clone-down
         uses: actions/checkout@v3
       - run: ci/build-app.sh
+      - name: Upload Repo
+        uses: actions/upload-artifact@v3
+        with: 
+          name: code
+          path: .
